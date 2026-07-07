@@ -1,0 +1,21 @@
+"DEPARTAMENTO","CARGO","QUANTIDADE_FUNCIONARIOS","MENOR_SALARIO","MAIOR_SALARIO"
+"Accounting","Accounting Manager",1,8200,16000
+"Accounting","Public Accountant",1,4200,9000
+"Administration","Administration Assistant",1,3000,6000
+"Executive","Administration Vice President",2,15000,30000
+"Executive","President",1,20080,40000
+"Finance","Accountant",5,4200,9000
+"Finance","Finance Manager",1,8200,16000
+"Human Resources","Human Resources Representative",1,4000,9000
+"IT","Programmer",5,4000,10000
+"Marketing","Marketing Manager",1,9000,15000
+"Marketing","Marketing Representative",1,4000,9000
+"Public Relations","Public Relations Representative",1,4500,10500
+"Purchasing","Purchasing Clerk",5,2500,5500
+"Purchasing","Purchasing Manager",1,8000,15000
+"Sales","Sales Manager",5,10000,20080
+"Sales","Sales Representative",29,6000,12008
+"Shipping","Shipping Clerk",20,2500,5500
+"Shipping","Stock Clerk",20,2008,5000
+"Shipping","Stock Manager",5,5500,8500
+,"Sales Representative",1,6000,12008
