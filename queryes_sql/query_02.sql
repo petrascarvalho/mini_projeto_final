@@ -2,9 +2,7 @@
 WITH RESULTADO_FUNCIONARIOS AS (
     SELECT
         E.EMPLOYEE_ID     AS ID_EMPREGADO,
-        E.FIRST_NAME
-        || ' '
-        || E.LAST_NAME    AS NOME_FUNCIONARIO,
+        E.FIRST_NAME || ' ' || E.LAST_NAME    AS NOME_FUNCIONARIO,
         R.REGION_NAME     AS REGIAO,
         C.COUNTRY_NAME    AS PAIS,
         L.CITY            AS CIDADE,
