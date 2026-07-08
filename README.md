@@ -1,4 +1,4 @@
-# 📊 Mini Projeto — Visualização de Dados e Business Intelligence
+# 📊 Mini Projeto Final — Visualização de Dados e Business Intelligence
 
 **Curso:** SENAI/SC — Lab 365  
 **Módulo:** M1S07  
@@ -61,13 +61,13 @@ mini_projeto_final/
 │
 ├── csv_nao_processados/
 │   ├── query_01.csv
-│   └── query_02_completa.csv
+│   └── query_02.csv
 │
 ├── processados/
 │   └── final.csv
 │
 ├── python/
-│   └── query_01.py
+│   └── codigo_final.py
 │
 └── README.md
 ```
@@ -179,7 +179,7 @@ WITH RESULTADO_FUNCIONARIOS AS (
     LEFT JOIN HR.REGIONS R     ON C.REGION_ID = R.REGION_ID
     WHERE
         E.SALARY > 1000
-        AND E.SALARY < 3000
+        AND E.SALARY < 30000
 )
 SELECT
     ID_EMPREGADO,
@@ -226,7 +226,7 @@ Após a execução das consultas no FreeSQL, os resultados foram exportados para
 | Arquivo | Origem | Finalidade |
 |---|---|---|
 | `query_01.csv` | `query_01.sql` | Complementar a análise salarial |
-| `query_02_completa.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
+| `query_02.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
 
 A exportação para CSV foi necessária para permitir a continuidade da análise em Python.
 
@@ -283,7 +283,7 @@ Essa etapa garante maior consistência nos dados e evita problemas causados por 
 
 ## 🔄 Etapa 05 — Integração das Bases
 
-A base `query_02_completa.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
+A base `query_02.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
 
 ```python
 df_final = pd.merge(
@@ -416,7 +416,7 @@ Este projeto permitiu aplicar, de forma prática, conceitos importantes de anál
 
 ## 🏁 Conclusão
 
-O mini projeto demonstrou um fluxo completo de análise de dados, iniciando pela extração das informações no FreeSQL e avançando para o tratamento, integração e análise exploratória em Python.
+O mini projeto Final demonstrou um fluxo completo de análise de dados, iniciando pela extração das informações no FreeSQL e avançando para o tratamento, integração e análise exploratória em Python.
 
 A etapa SQL permitiu estruturar os dados da base HR, relacionando funcionários, departamentos, cargos, localizações, países e regiões.
 
