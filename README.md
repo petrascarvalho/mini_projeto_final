@@ -1,6 +1,6 @@
 # 📊 Mini Projeto Final — Visualização de Dados e Business Intelligence
 
-**Curso:** SENAI/SC — Lab 365  
+**Curso:** SENAI/SC — SCTEC 
 **Módulo:** M1S07  
 **Professor:** Rodrigo Garcia Brunini  
 **Base de Dados:** FreeSQL — Human Resources `HR`  
