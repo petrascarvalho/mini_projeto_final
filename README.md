@@ -1,39 +1,95 @@
-# Projeto SQL — Análise de Funcionários e Salários no FreeSQL
+# 📊 Mini Projeto — Visualização de Dados e Business Intelligence
 
-## 1. Contexto do Projeto
+**Curso:** SENAI/SC — Lab 365  
+**Módulo:** M1S07  
+**Professor:** Rodrigo Garcia Brunini  
+**Base de Dados:** FreeSQL — Human Resources `HR`  
+**Autor:** Petras Ruben Carvalho  
 
-Este projeto tem como objetivo realizar análises em SQL utilizando o **FreeSQL** e a base de dados **HR**, uma base própria disponibilizada no ambiente FreeSQL.
+---
+
+## 🎯 Objetivo do Projeto
+
+Este repositório contém o desenvolvimento de um pipeline de análise de dados utilizando **SQL** e **Python**, a partir da base **Human Resources (HR)** disponível no ambiente FreeSQL.
+
+O objetivo principal do projeto é estruturar dados brutos, realizar consultas SQL, exportar os resultados para CSV, aplicar técnicas de tratamento e limpeza dos dados, gerar métricas estatísticas e construir gráficos para apoiar a tomada de decisão.
+
+---
+
+## 🧭 Visão Geral do Pipeline
+
+```text
+Base HR no FreeSQL
+        ↓
+Consultas SQL
+        ↓
+Exportação para CSV
+        ↓
+Tratamento em Python
+        ↓
+Análise Estatística
+        ↓
+Visualização dos Dados
+        ↓
+Base Final Processada
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|---|---|
+| **FreeSQL** | Ambiente utilizado para consulta da base HR |
+| **SQL** | Extração, relacionamento, filtros e agrupamentos |
+| **Python** | Tratamento, análise exploratória e visualização |
+| **Pandas** | Manipulação e integração dos dados |
+| **NumPy** | Cálculos numéricos e distribuição dos dados |
+| **Matplotlib** | Criação dos gráficos |
+| **CSV** | Integração entre SQL e Python |
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
+mini_projeto_final/
+│
+├── sql/
+│   ├── query_01.sql
+│   └── query_02.sql
+│
+├── csv_nao_processados/
+│   ├── query_01.csv
+│   └── query_02_completa.csv
+│
+├── processados/
+│   └── final.csv
+│
+├── python/
+│   └── query_01.py
+│
+└── README.md
+```
+
+---
+
+## 🧩 Etapa 01 — Extração dos Dados com SQL
+
+A primeira etapa do projeto foi realizada no **FreeSQL**, utilizando a base de dados **HR**.
 
 Foram desenvolvidas duas consultas principais:
 
-- **query_01.sql**: análise da distribuição de salários por departamento e cargo.
-- **query_02.sql**: análise de funcionários por região, incluindo informações de localização.
-
-Após a execução das consultas no FreeSQL, os resultados da **query_01** e da **query_02** foram salvos em arquivos **CSV**. Essa etapa foi realizada para permitir a continuidade da análise em **Python**, possibilitando novas etapas de exploração, limpeza, visualização e modelagem dos dados com bibliotecas como `pandas`, `matplotlib`, `seaborn` e outras ferramentas analíticas.
-
-As consultas utilizam a tabela `HR.EMPLOYEES` como base principal e realizam relacionamentos com tabelas dimensionais por meio de `LEFT JOIN`.
+| Query | Objetivo |
+|---|---|
+| `query_01.sql` | Analisar a distribuição de salários por departamento e cargo |
+| `query_02.sql` | Analisar funcionários por região, país, cidade, departamento e cargo |
 
 ---
 
-## 2. Ambiente Utilizado
+## 🔗 Relacionamento entre as Tabelas
 
-- **Ferramenta:** FreeSQL
-- **Base de dados:** HR
-- **Linguagem:** SQL
-- **Formato de saída:** CSV, para continuidade das análises em Python
-- **Tabelas utilizadas:**
-  - `HR.EMPLOYEES`
-  - `HR.DEPARTMENTS`
-  - `HR.JOBS`
-  - `HR.LOCATIONS`
-  - `HR.COUNTRIES`
-  - `HR.REGIONS`
-
----
-
-## 3. Relacionamento entre as Tabelas
-
-A lógica das consultas foi baseada nos seguintes relacionamentos:
+As consultas foram construídas a partir da tabela principal `HR.EMPLOYEES`, relacionando as demais tabelas por meio de `LEFT JOIN`.
 
 ```sql
 HR.EMPLOYEES.DEPARTMENT_ID = HR.DEPARTMENTS.DEPARTMENT_ID
@@ -43,82 +99,32 @@ HR.LOCATIONS.COUNTRY_ID    = HR.COUNTRIES.COUNTRY_ID
 HR.COUNTRIES.REGION_ID     = HR.REGIONS.REGION_ID
 ```
 
-A tabela `HR.EMPLOYEES` foi utilizada como tabela principal, pois contém os funcionários, seus cargos, departamentos e salários. As demais tabelas foram relacionadas para enriquecer a análise com informações de departamento, cargo, localização, país e região.
+### Tabelas utilizadas
+
+- `HR.EMPLOYEES`
+- `HR.DEPARTMENTS`
+- `HR.JOBS`
+- `HR.LOCATIONS`
+- `HR.COUNTRIES`
+- `HR.REGIONS`
 
 ---
 
-# Query 01 — Distribuição de Salários por Departamento e Cargo
+## 📌 Query 01 — Salários por Departamento e Cargo
 
-## 4. Pergunta de Negócio
+A `query_01.sql` foi desenvolvida para responder à seguinte pergunta de negócio:
 
-**Como os salários estão distribuídos por departamento e cargo?**
+> Como os salários estão distribuídos por departamento e cargo?
 
-A primeira consulta foi desenvolvida para analisar a distribuição salarial considerando o departamento e o cargo dos funcionários.
+A consulta apresenta uma visão consolidada contendo:
 
----
-
-## 5. Objetivo da Query 01
-
-A `query_01.sql` tem como objetivo apresentar uma visão consolidada por **departamento** e **cargo**, permitindo observar:
-
-- quantidade de funcionários por departamento e cargo;
-- menor faixa salarial cadastrada para o cargo;
-- maior faixa salarial cadastrada para o cargo;
-- distribuição dos cargos dentro dos departamentos.
-
----
-
-## 6. Tabelas Utilizadas na Query 01
-
-A consulta utiliza as seguintes tabelas:
-
-### `HR.EMPLOYEES`
-
-Tabela principal da consulta. Contém os dados dos funcionários, como:
-
-- `EMPLOYEE_ID`
-- `DEPARTMENT_ID`
-- `JOB_ID`
-
-### `HR.DEPARTMENTS`
-
-Tabela utilizada para identificar o nome do departamento.
-
-Campo utilizado:
-
-- `DEPARTMENT_NAME`
-
-### `HR.JOBS`
-
-Tabela utilizada para identificar o cargo e a faixa salarial cadastrada para cada cargo.
-
-Campos utilizados:
-
-- `JOB_TITLE`
-- `MIN_SALARY`
-- `MAX_SALARY`
-
----
-
-## 7. Processo Realizado na Query 01
-
-A consulta realiza os seguintes passos:
-
-1. Parte da tabela `HR.EMPLOYEES`, que contém os funcionários.
-2. Faz um `LEFT JOIN` com `HR.DEPARTMENTS` para buscar o nome do departamento.
-3. Faz um `LEFT JOIN` com `HR.JOBS` para buscar o cargo e a faixa salarial.
-4. Agrupa os dados por departamento e cargo.
-5. Calcula a quantidade de funcionários em cada grupo.
-6. Calcula o menor e o maior salário de referência cadastrados na tabela de cargos.
-7. Ordena o resultado por departamento e cargo.
-
----
-
-## 8. Código da Query 01
+- departamento;
+- cargo;
+- quantidade de funcionários;
+- menor salário de referência;
+- maior salário de referência.
 
 ```sql
--- ANALISAR A DISTRIBUIÇÃO DE SALÁRIOS POR DEPARTAMENTO E CARGO
-
 SELECT
     d.DEPARTMENT_NAME AS departamento,
     j.JOB_TITLE AS cargo,
@@ -138,194 +144,41 @@ ORDER BY
     j.JOB_TITLE;
 ```
 
----
+### 📈 Leitura Gerencial
 
-## 9. Explicação dos Campos da Query 01
+Essa consulta permite avaliar a distribuição de cargos dentro dos departamentos e observar as faixas salariais previstas para cada função.
 
-| Campo                       | Descrição                                                                 |
-| --------------------------- | --------------------------------------------------------------------------- |
-| `departamento`            | Nome do departamento do funcionário.                                       |
-| `cargo`                   | Nome do cargo ocupado pelo funcionário.                                    |
-| `quantidade_funcionarios` | Quantidade de funcionários naquele departamento e cargo.                   |
-| `menor_salario`           | Menor salário de referência cadastrado para o cargo na tabela`HR.JOBS`. |
-| `maior_salario`           | Maior salário de referência cadastrado para o cargo na tabela`HR.JOBS`. |
+A análise pode apoiar decisões relacionadas à estrutura organizacional, concentração de funcionários por área e comparação de faixas salariais entre cargos.
 
 ---
 
-## 10. Observação Técnica sobre Salário
+## 🌎 Query 02 — Funcionários por Região
 
-Na `query_01.sql`, os campos utilizados para menor e maior salário são:
+A `query_02.sql` foi criada para responder à seguinte pergunta de negócio:
+
+> Como os funcionários estão distribuídos por região, considerando localização, departamento, cargo e salário?
+
+A consulta utiliza uma **CTE** para organizar os dados antes da apresentação final.
 
 ```sql
-MIN(j.MIN_SALARY)
-MAX(j.MAX_SALARY)
-```
-
-Esses campos vêm da tabela `HR.JOBS` e representam a **faixa salarial cadastrada para o cargo**, não necessariamente o salário real recebido por cada funcionário.
-
-Para analisar o salário real dos funcionários, o ideal seria utilizar o campo:
-
-```sql
-e.SALARY
-```
-
-Uma versão complementar da análise poderia incluir:
-
-```sql
-MIN(e.SALARY) AS menor_salario_real,
-MAX(e.SALARY) AS maior_salario_real,
-ROUND(AVG(e.SALARY), 2) AS salario_medio_real
-```
-
----
-
-## 11. Leitura Gerencial da Query 01
-
-A consulta permite entender como os funcionários estão distribuídos entre departamentos e cargos, além de apresentar a faixa salarial prevista para cada cargo.
-
-Essa análise pode apoiar decisões relacionadas a:
-
-- estrutura organizacional;
-- distribuição de cargos;
-- concentração de funcionários por área;
-- comparação entre faixas salariais de diferentes cargos;
-- avaliação inicial da composição salarial por departamento.
-
----
-
-# Query 02 — Funcionários por Região com Informações de Localização
-
-## 12. Pergunta de Negócio
-
-**Como os funcionários estão distribuídos por região, considerando informações de localização, departamento e cargo?**
-
-A segunda consulta foi desenvolvida para analisar os funcionários por região, trazendo informações detalhadas de localização e dados individuais dos empregados.
-
----
-
-## 13. Objetivo da Query 02
-
-A `query_02.sql` tem como objetivo listar os funcionários com suas respectivas informações de:
-
-- ID do empregado;
-- nome do funcionário;
-- região;
-- país;
-- cidade;
-- departamento;
-- cargo;
-- salário;
-- quantidade de funcionários no mesmo agrupamento de região, país, cidade, departamento e cargo.
-
-Além disso, a consulta aplica um filtro com `WHERE` para considerar apenas funcionários com salário maior que `1000` e menor que `3000`.
-
----
-
-## 14. Tabelas Utilizadas na Query 02
-
-A consulta utiliza todas as tabelas solicitadas no escopo do projeto:
-
-### `HR.EMPLOYEES`
-
-Tabela principal da análise.
-
-Campos utilizados:
-
-- `EMPLOYEE_ID`
-- `FIRST_NAME`
-- `LAST_NAME`
-- `DEPARTMENT_ID`
-- `JOB_ID`
-- `SALARY`
-
-### `HR.DEPARTMENTS`
-
-Tabela usada para buscar o nome do departamento e conectar o departamento à localização.
-
-Campos utilizados:
-
-- `DEPARTMENT_ID`
-- `DEPARTMENT_NAME`
-- `LOCATION_ID`
-
-### `HR.JOBS`
-
-Tabela usada para buscar o nome do cargo.
-
-Campo utilizado:
-
-- `JOB_TITLE`
-
-### `HR.LOCATIONS`
-
-Tabela usada para buscar a cidade e conectar a localização ao país.
-
-Campos utilizados:
-
-- `LOCATION_ID`
-- `CITY`
-- `COUNTRY_ID`
-
-### `HR.COUNTRIES`
-
-Tabela usada para buscar o país e conectar o país à região.
-
-Campos utilizados:
-
-- `COUNTRY_ID`
-- `COUNTRY_NAME`
-- `REGION_ID`
-
-### `HR.REGIONS`
-
-Tabela usada para buscar o nome da região.
-
-Campo utilizado:
-
-- `REGION_NAME`
-
----
-
-## 15. Processo Realizado na Query 02
-
-A consulta realiza os seguintes passos:
-
-1. Cria uma CTE chamada `RESULTADO_FUNCIONARIOS`.
-2. Dentro da CTE, coleta as informações dos funcionários.
-3. Relaciona os funcionários com departamentos, cargos, localizações, países e regiões.
-4. Aplica um filtro com `WHERE` para trazer apenas funcionários com salário maior que `1000` e menor que `3000`.
-5. No `SELECT` final, exibe as informações individuais dos funcionários.
-6. Utiliza uma função de janela para calcular a quantidade de funcionários por grupo, sem perder o detalhe individual de cada funcionário.
-7. Ordena o resultado por região, país, cidade, departamento, cargo e nome do funcionário.
-
----
-
-## 16. Código da Query 02
-
-```sql
--- COLETANDO AS INFORMAÇÕES DAS TABELAS EMPLOYEES, DEPARTMENTS, JOBS,
--- LOCATIONS, COUNTRIES E REGIONS E APLICANDO UM FILTRO DE SALÁRIOS
--- MAIOR QUE 1000 E MENOR QUE 3000
-
 WITH RESULTADO_FUNCIONARIOS AS (
     SELECT
-        E.EMPLOYEE_ID     AS ID_EMPREGADO,
-        E.FIRST_NAME||' '|| E.LAST_NAME    AS NOME_FUNCIONARIO,
-        R.REGION_NAME     AS REGIAO,
-        C.COUNTRY_NAME    AS PAIS,
-        L.CITY            AS CIDADE,
+        E.EMPLOYEE_ID AS ID_EMPREGADO,
+        E.FIRST_NAME || ' ' || E.LAST_NAME AS NOME_FUNCIONARIO,
+        R.REGION_NAME AS REGIAO,
+        C.COUNTRY_NAME AS PAIS,
+        L.CITY AS CIDADE,
         D.DEPARTMENT_NAME AS DEPARTAMENTO,
-        J.JOB_TITLE       AS CARGO,
-        E.SALARY          AS SALARIO
-    FROM
-        HR.EMPLOYEES   E
-        LEFT JOIN HR.DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
-        LEFT JOIN HR.JOBS        J ON E.JOB_ID = J.JOB_ID
-        LEFT JOIN HR.LOCATIONS   L ON D.LOCATION_ID = L.LOCATION_ID
-        LEFT JOIN HR.COUNTRIES   C ON L.COUNTRY_ID = C.COUNTRY_ID
-        LEFT JOIN HR.REGIONS     R ON C.REGION_ID = R.REGION_ID
+        J.JOB_TITLE AS CARGO,
+        E.SALARY AS SALARIO
+    FROM HR.EMPLOYEES E
+    LEFT JOIN HR.DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
+    LEFT JOIN HR.JOBS J        ON E.JOB_ID = J.JOB_ID
+    LEFT JOIN HR.LOCATIONS L   ON D.LOCATION_ID = L.LOCATION_ID
+    LEFT JOIN HR.COUNTRIES C   ON L.COUNTRY_ID = C.COUNTRY_ID
+    LEFT JOIN HR.REGIONS R     ON C.REGION_ID = R.REGION_ID
     WHERE
-            E.SALARY > 1000
+        E.SALARY > 1000
         AND E.SALARY < 3000
 )
 SELECT
@@ -338,9 +191,9 @@ SELECT
     CARGO,
     SALARIO,
     COUNT(ID_EMPREGADO)
-    OVER(PARTITION BY REGIAO, PAIS, CIDADE, DEPARTAMENTO, CARGO) AS QUANTIDADE_FUNCIONARIOS
-FROM
-    RESULTADO_FUNCIONARIOS
+    OVER(PARTITION BY REGIAO, PAIS, CIDADE, DEPARTAMENTO, CARGO) 
+    AS QUANTIDADE_FUNCIONARIOS
+FROM RESULTADO_FUNCIONARIOS
 ORDER BY
     REGIAO,
     PAIS,
@@ -350,153 +203,223 @@ ORDER BY
     NOME_FUNCIONARIO;
 ```
 
----
+### ⚙️ Recursos Aplicados
 
-## 17. Explicação da CTE
+- `LEFT JOIN`
+- `WHERE`
+- `ORDER BY`
+- CTE com `WITH`
+- Função de janela com `COUNT() OVER(PARTITION BY)`
 
-A CTE `RESULTADO_FUNCIONARIOS` funciona como uma consulta intermediária. Ela organiza os dados antes do `SELECT` final.
+### 📈 Leitura Gerencial
 
-Essa estrutura melhora a legibilidade da consulta, pois separa a etapa de coleta e relacionamento das tabelas da etapa final de apresentação dos dados.
+Essa consulta permite analisar a distribuição dos funcionários por região, país, cidade, departamento e cargo, mantendo o nível individual de cada funcionário.
 
-Trecho principal:
-
-```sql
-WITH RESULTADO_FUNCIONARIOS AS (
-    SELECT
-        ...
-    FROM HR.EMPLOYEES E
-    ...
-)
-```
+A função de janela possibilita calcular a quantidade de funcionários por grupo sem perder o detalhamento dos registros.
 
 ---
 
-## 18. Explicação do Filtro WHERE
+## 📤 Etapa 02 — Exportação dos Resultados para CSV
 
-A consulta aplica o seguinte filtro:
+Após a execução das consultas no FreeSQL, os resultados foram exportados para arquivos CSV.
 
-```sql
-WHERE
-        E.SALARY > 1000
-    AND E.SALARY < 3000
-```
+| Arquivo | Origem | Finalidade |
+|---|---|---|
+| `query_01.csv` | `query_01.sql` | Complementar a análise salarial |
+| `query_02_completa.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
 
-Esse filtro seleciona apenas funcionários cuja remuneração está acima de `1000` e abaixo de `3000`.
-
-Como as duas condições estão ligadas por `AND`, o funcionário precisa atender às duas regras ao mesmo tempo.
-
-Também seria possível escrever a mesma lógica com `BETWEEN`, porém a regra atual é exclusiva, ou seja, não inclui exatamente `1000` nem exatamente `3000`.
+A exportação para CSV foi necessária para permitir a continuidade da análise em Python.
 
 ---
 
-## 19. Explicação da Função de Janela
+## 🐍 Etapa 03 — Tratamento dos Dados em Python
 
-A query utiliza a função:
+Na etapa em Python, os arquivos CSV foram carregados, tratados e integrados.
 
-```sql
-COUNT(ID_EMPREGADO)
-OVER(PARTITION BY REGIAO, PAIS, CIDADE, DEPARTAMENTO, CARGO)
-```
-
-Essa função calcula a quantidade de funcionários dentro do mesmo agrupamento de:
-
-- região;
-- país;
-- cidade;
-- departamento;
-- cargo.
-
-A vantagem dessa abordagem é que ela mantém o detalhe individual do funcionário, exibindo `ID_EMPREGADO` e `NOME_FUNCIONARIO`, e ao mesmo tempo apresenta a quantidade de funcionários no grupo ao qual ele pertence.
-
----
-
-## 20. Explicação dos Campos da Query 02
-
-| Campo                       | Descrição                                                                                 |
-| --------------------------- | ------------------------------------------------------------------------------------------- |
-| `ID_EMPREGADO`            | Código identificador do funcionário.                                                      |
-| `NOME_FUNCIONARIO`        | Nome completo do funcionário, formado por primeiro nome e sobrenome.                       |
-| `REGIAO`                  | Região onde o funcionário está localizado.                                               |
-| `PAIS`                    | País vinculado à localização do departamento.                                           |
-| `CIDADE`                  | Cidade vinculada ao departamento do funcionário.                                           |
-| `DEPARTAMENTO`            | Departamento onde o funcionário está alocado.                                             |
-| `CARGO`                   | Cargo ocupado pelo funcionário.                                                            |
-| `SALARIO`                 | Salário do funcionário.                                                                   |
-| `QUANTIDADE_FUNCIONARIOS` | Quantidade de funcionários no mesmo grupo de região, país, cidade, departamento e cargo. |
-
----
-
-## 21. Leitura Gerencial da Query 02
-
-A consulta permite analisar a distribuição dos funcionários por localização geográfica, considerando região, país e cidade, além de detalhar o departamento e o cargo de cada funcionário.
-
-Essa análise pode apoiar decisões relacionadas a:
-
-- concentração de funcionários por região;
-- distribuição geográfica da força de trabalho;
-- análise de cargos por localização;
-- avaliação de salários por região;
-- identificação de departamentos presentes em cada localidade;
-- análise de grupos de funcionários com salário dentro de uma faixa específica.
-
----
-
-## 22. Diferença entre as Queries
-
-| Consulta         | Tipo de análise                          | Nível de detalhe          | Principal objetivo                                                          |
-| ---------------- | ----------------------------------------- | -------------------------- | --------------------------------------------------------------------------- |
-| `query_01.sql` | Salários por departamento e cargo        | Consolidado                | Entender a distribuição salarial por departamento e cargo.                |
-| `query_02.sql` | Funcionários por região e localização | Detalhado por funcionário | Identificar funcionários por região, país, cidade, departamento e cargo. |
-
----
-
-## 23. Exportação dos Resultados para CSV e Continuidade em Python
-
-Após a construção e validação das consultas no FreeSQL, os resultados obtidos nas duas queries foram exportados para arquivos no formato **CSV**.
-
-Essa exportação foi uma etapa importante do projeto, pois permite que os dados consultados no banco sejam utilizados posteriormente em uma análise mais aprofundada com **Python**.
-
-### Arquivos gerados
-
-| Arquivo SQL      | Resultado exportado                                            | Finalidade do CSV                                                                                                                          |
-| ---------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `query_01.sql` | Distribuição de salários por departamento e cargo           | Continuar a análise salarial em Python, criando estatísticas, gráficos e possíveis comparações entre departamentos e cargos.         |
-| `query_02.sql` | Funcionários por região, localização, departamento e cargo | Continuar a análise geográfica dos funcionários em Python, permitindo visualizações por região, país, cidade, departamento e cargo. |
-
-### Motivo da exportação para CSV
-
-A exportação para CSV facilita a integração entre o ambiente SQL e o ambiente Python. Com isso, a análise deixa de depender apenas da consulta no banco de dados e passa a permitir novas etapas, como:
-
-- leitura dos dados com `pandas;`
-- analise gráfica com `seaborn e matplotlib;`
-- verificação de tipos de dados;
-- tratamento de valores ausentes;
-- criação de gráficos exploratórios;
-- análise estatística complementar;
-- preparação dos dados para dashboards ou modelos analíticos.
-
-Exemplo de leitura dos arquivos CSV em Python:
+Bibliotecas utilizadas:
 
 ```python
 import pandas as pd
-
-df_query_01 = pd.read_csv('query_01.csv')
-df_query_02 = pd.read_csv('query_02.csv')
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 
-Dessa forma, o fluxo do projeto fica organizado em duas etapas principais:
+Principais processos realizados:
 
-1. **FreeSQL:** construção das consultas, relacionamento das tabelas e extração dos dados.
-2. **Python:** continuidade da análise exploratória, geração de gráficos, tratamento dos dados e aprofundamento das perguntas de negócio.
+- carregamento dos arquivos CSV;
+- inspeção inicial dos dados;
+- padronização dos nomes das colunas;
+- padronização dos campos `DEPARTAMENTO` e `CARGO`;
+- integração das bases;
+- tratamento de valores nulos;
+- conversão das colunas numéricas;
+- análise estatística dos salários;
+- identificação de outliers;
+- geração de gráficos;
+- exportação da base final tratada.
 
 ---
 
-## 24. Conclusão
+## 🧹 Etapa 04 — Padronização e Limpeza dos Dados
 
-As duas consultas desenvolvidas permitem analisar informações importantes da base `HR` no FreeSQL.
+Para evitar erros na manipulação e na junção dos datasets, os nomes das colunas foram padronizados.
 
-A `query_01.sql` apresenta uma visão consolidada por departamento e cargo, permitindo observar a distribuição de funcionários e faixas salariais por função.
+```python
+df1.columns = df1.columns.str.strip().str.upper()
+df2.columns = df2.columns.str.strip().str.upper()
+```
 
-A `query_02.sql` amplia a análise ao incluir dados geográficos, como região, país e cidade, além de trazer o detalhe individual dos funcionários. A utilização da CTE e da função de janela melhora a organização do código e permite calcular a quantidade de funcionários por grupo sem perder o nível detalhado da análise.
+Também foram padronizadas as colunas utilizadas como chave de relacionamento:
 
-De forma geral, o projeto demonstra o uso de `LEFT JOIN`, `WHERE`, `GROUP BY`, `ORDER BY`, CTE e função de janela para responder perguntas de negócio relacionadas a funcionários, salários, departamentos, cargos e localização.
+```python
+for coluna in ['DEPARTAMENTO', 'CARGO']:
+    df1[coluna] = df1[coluna].astype(str).str.strip().str.upper()
+    df2[coluna] = df2[coluna].astype(str).str.strip().str.upper()
+```
+
+Essa etapa garante maior consistência nos dados e evita problemas causados por espaços, letras minúsculas ou diferenças de escrita.
+
+---
+
+## 🔄 Etapa 05 — Integração das Bases
+
+A base `query_02_completa.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
+
+```python
+df_final = pd.merge(
+    df2,
+    df3,
+    how='left',
+    on=['DEPARTAMENTO', 'CARGO']
+)
+```
+
+O tipo de junção utilizado foi o **LEFT JOIN**, mantendo todos os registros da base principal e adicionando as informações complementares quando houvesse correspondência entre departamento e cargo.
+
+---
+
+## 🧾 Etapa 06 — Tratamento de Valores Nulos
+
+Os valores ausentes foram tratados de acordo com o tipo da coluna.
+
+| Tipo de coluna | Tratamento |
+|---|---|
+| Texto | Substituição por `SEM INFORMAÇÃO` |
+| Numérica | Mantida como `NaN` para preservar os cálculos |
+
+Essa decisão evita que colunas numéricas sejam convertidas em texto, garantindo que os cálculos estatísticos funcionem corretamente.
+
+---
+
+## 📊 Etapa 07 — Análise Estatística dos Salários
+
+Foram calculadas as principais medidas estatísticas da coluna `SALARIO_ATUAL`.
+
+| Métrica | Objetivo |
+|---|---|
+| Média | Identificar o salário médio |
+| Mediana | Identificar o valor central da distribuição |
+| Mínimo | Identificar o menor salário |
+| Máximo | Identificar o maior salário |
+
+Essas métricas fornecem uma visão geral da distribuição salarial dos funcionários analisados.
+
+---
+
+## 📉 Etapa 08 — Identificação de Outliers
+
+A análise de outliers foi realizada pelo método **IQR**, conhecido como intervalo interquartil.
+
+```python
+Q1 = salarios.quantile(0.25)
+Q3 = salarios.quantile(0.75)
+
+IQR = Q3 - Q1
+
+limite_inferior = Q1 - 1.5 * IQR
+limite_superior = Q3 + 1.5 * IQR
+```
+
+Foram considerados possíveis outliers os salários abaixo do limite inferior ou acima do limite superior.
+
+Essa etapa é importante para identificar valores que se distanciam do comportamento geral dos dados.
+
+---
+
+## 📊 Etapa 09 — Visualização dos Dados
+
+Foram gerados dois gráficos principais para apoiar a análise exploratória.
+
+### 📦 Boxplot dos Salários
+
+Utilizado para visualizar:
+
+- mediana;
+- quartis;
+- dispersão dos salários;
+- possíveis outliers.
+
+### 📊 Gráfico de Barras da Distribuição Salarial
+
+Utilizado para analisar:
+
+- concentração de funcionários por faixa salarial;
+- distribuição dos salários;
+- comparação com os limites do IQR.
+
+---
+
+## 💾 Etapa 10 — Exportação da Base Final
+
+Após o tratamento e análise dos dados, foi gerado o arquivo final:
+
+```text
+processados/final.csv
+```
+
+Esse arquivo contém a base consolidada, tratada e pronta para novas análises, dashboards ou relatórios gerenciais.
+
+---
+
+## ✅ Resultados Obtidos
+
+Ao final do projeto, foram alcançados os seguintes resultados:
+
+- criação de consultas SQL na base HR;
+- relacionamento entre múltiplas tabelas;
+- exportação dos resultados para CSV;
+- integração dos dados em Python;
+- padronização e limpeza dos datasets;
+- tratamento de valores ausentes;
+- análise estatística dos salários;
+- identificação de possíveis outliers;
+- criação de gráficos exploratórios;
+- geração da base final `final.csv`.
+
+---
+
+## 🧠 Aprendizados do Projeto
+
+Este projeto permitiu aplicar, de forma prática, conceitos importantes de análise de dados e Business Intelligence, como:
+
+- extração de dados com SQL;
+- relacionamento entre tabelas;
+- uso de CTE;
+- uso de função de janela;
+- preparação de dados para análise;
+- limpeza e padronização de datasets;
+- análise estatística;
+- visualização de dados;
+- construção de base final para suporte à decisão.
+
+---
+
+## 🏁 Conclusão
+
+O mini projeto demonstrou um fluxo completo de análise de dados, iniciando pela extração das informações no FreeSQL e avançando para o tratamento, integração e análise exploratória em Python.
+
+A etapa SQL permitiu estruturar os dados da base HR, relacionando funcionários, departamentos, cargos, localizações, países e regiões.
+
+A etapa em Python possibilitou consolidar os arquivos CSV, padronizar os dados, tratar valores ausentes, calcular indicadores estatísticos e gerar gráficos para facilitar a interpretação dos salários.
+
+O resultado final foi a criação de uma base consolidada chamada `final.csv`, pronta para ser utilizada em novas análises, dashboards e relatórios de Business Intelligence.

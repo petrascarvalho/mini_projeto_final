@@ -1,25 +1,108 @@
 "ID_EMPREGADO","NOME_FUNCIONARIO","REGIAO","PAIS","CIDADE","DEPARTAMENTO","CARGO","SALARIO","QUANTIDADE_FUNCIONARIOS"
-118,"Guy Himuro","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2600,4
-119,"Karen Colmenares","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2500,4
-116,"Shelli Baida","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2900,4
-117,"Sigal Tobias","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2800,4
-198,"Donald OConnell","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2600,7
-199,"Douglas Grant","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2600,7
-183,"Girard Geoni","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2800,7
-182,"Martha Sullivan","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2500,7
-191,"Randall Perkins","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2500,7
-190,"Timothy Venzl","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2900,7
-195,"Vance Jones","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2800,7
-136,"Hazel Philtanker","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2200,13
-126,"Irene Mikkilineni","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2700,13
-127,"James Landry","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2400,13
-131,"James Marlow","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2500,13
-139,"John Seo","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2700,13
-140,"Joshua Patel","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2500,13
-135,"Ki Gee","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2400,13
-134,"Michael Rogers","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2900,13
-130,"Mozhe Atkinson","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2800,13
-144,"Peter Vargas","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2500,13
-143,"Randall Matos","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2600,13
-128,"Steven Markle","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2200,13
-132,"TJ Olson","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2100,13
+201,"Michael Martinez","Americas","Canada","Toronto","Marketing","Marketing Manager",13000,1
+202,"Pat Davis","Americas","Canada","Toronto","Marketing","Marketing Representative",6000,1
+205,"Shelley Higgins","Americas","United States of America","Seattle","Accounting","Accounting Manager",12008,1
+206,"William Gietz","Americas","United States of America","Seattle","Accounting","Public Accountant",8300,1
+200,"Jennifer Whalen","Americas","United States of America","Seattle","Administration","Administration Assistant",4400,1
+102,"Lex Garcia","Americas","United States of America","Seattle","Executive","Administration Vice President",17000,2
+101,"Neena Yang","Americas","United States of America","Seattle","Executive","Administration Vice President",17000,2
+100,"Steven King","Americas","United States of America","Seattle","Executive","President",24000,1
+109,"Daniel Faviet","Americas","United States of America","Seattle","Finance","Accountant",9000,5
+111,"Ismael Sciarra","Americas","United States of America","Seattle","Finance","Accountant",7700,5
+110,"John Chen","Americas","United States of America","Seattle","Finance","Accountant",8200,5
+112,"Jose Manuel Urman","Americas","United States of America","Seattle","Finance","Accountant",7800,5
+113,"Luis Popp","Americas","United States of America","Seattle","Finance","Accountant",6900,5
+108,"Nancy Gruenberg","Americas","United States of America","Seattle","Finance","Finance Manager",12008,1
+115,"Alexander Khoo","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",3100,5
+118,"Guy Himuro","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2600,5
+119,"Karen Colmenares","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2500,5
+116,"Shelli Baida","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2900,5
+117,"Sigal Tobias","Americas","United States of America","Seattle","Purchasing","Purchasing Clerk",2800,5
+114,"Den Li","Americas","United States of America","Seattle","Purchasing","Purchasing Manager",11000,1
+196,"Alana Walsh","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3100,20
+185,"Alexis Bull","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",4100,20
+187,"Anthony Cabrio","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3000,20
+193,"Britney Everett","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3900,20
+198,"Donald OConnell","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2600,20
+199,"Douglas Grant","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2600,20
+183,"Girard Geoni","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2800,20
+181,"Jean Fleaur","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3100,20
+189,"Jennifer Dilly","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3600,20
+186,"Julia Dellinger","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3400,20
+188,"Kelly Chung","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3800,20
+197,"Kevin Feeney","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3000,20
+182,"Martha Sullivan","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2500,20
+184,"Nandita Sarchand","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",4200,20
+191,"Randall Perkins","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2500,20
+194,"Samuel McLeod","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3200,20
+192,"Sarah Bell","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",4000,20
+190,"Timothy Venzl","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2900,20
+195,"Vance Jones","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",2800,20
+180,"Winston Taylor","Americas","United States of America","South San Francisco","Shipping","Shipping Clerk",3200,20
+142,"Curtis Davies","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3100,20
+136,"Hazel Philtanker","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2200,20
+126,"Irene Mikkilineni","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2700,20
+127,"James Landry","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2400,20
+131,"James Marlow","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2500,20
+133,"Jason Mallin","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3300,20
+139,"John Seo","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2700,20
+140,"Joshua Patel","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2500,20
+125,"Julia Nayer","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3200,20
+135,"Ki Gee","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2400,20
+129,"Laura Bissot","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3300,20
+134,"Michael Rogers","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2900,20
+130,"Mozhe Atkinson","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2800,20
+144,"Peter Vargas","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2500,20
+143,"Randall Matos","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2600,20
+137,"Renske Ladwig","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3600,20
+138,"Stephen Stiles","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3200,20
+128,"Steven Markle","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2200,20
+132,"TJ Olson","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",2100,20
+141,"Trenna Rajs","Americas","United States of America","South San Francisco","Shipping","Stock Clerk",3500,20
+121,"Adam Fripp","Americas","United States of America","South San Francisco","Shipping","Stock Manager",8200,5
+124,"Kevin Mourgos","Americas","United States of America","South San Francisco","Shipping","Stock Manager",5800,5
+120,"Matthew Weiss","Americas","United States of America","South San Francisco","Shipping","Stock Manager",8000,5
+122,"Payam Kaufling","Americas","United States of America","South San Francisco","Shipping","Stock Manager",7900,5
+123,"Shanta Vollman","Americas","United States of America","South San Francisco","Shipping","Stock Manager",6500,5
+103,"Alexander James","Americas","United States of America","Southlake","IT","Programmer",9000,5
+104,"Bruce Miller","Americas","United States of America","Southlake","IT","Programmer",6000,5
+105,"David Williams","Americas","United States of America","Southlake","IT","Programmer",4800,5
+107,"Diana Nguyen","Americas","United States of America","Southlake","IT","Programmer",4200,5
+106,"Valli Jackson","Americas","United States of America","Southlake","IT","Programmer",4800,5
+204,"Hermann Brown","Europe","Germany","Munich","Public Relations","Public Relations Representative",10000,1
+203,"Susan Jacobs","Europe","United Kingdom of Great Britain and Northern Ireland","London","Human Resources","Human Resources Representative",6500,1
+147,"Alberto Errazuriz","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Manager",12000,5
+149,"Eleni Zlotkey","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Manager",10500,5
+148,"Gerald Cambrault","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Manager",11000,5
+145,"John Singh","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Manager",14000,5
+146,"Karen Partners","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Manager",13500,5
+158,"Allan McEwen","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",9000,29
+175,"Alyssa Hutton","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",8800,29
+167,"Amit Banda","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",6200,29
+179,"Charles Johnson","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",6200,29
+153,"Christopher Olsen","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",8000,29
+162,"Clara Vishney","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",10500,29
+163,"Danielle Greene","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",9500,29
+151,"David Bernstein","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",9500,29
+165,"David Lee","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",6800,29
+172,"Elizabeth Bates","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7300,29
+174,"Ellen Abel","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",11000,29
+169,"Harrison Bloom","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",10000,29
+177,"Jack Livingston","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",8400,29
+156,"Janette King","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",10000,29
+176,"Jonathon Taylor","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",8600,29
+159,"Lindsey Smith","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",8000,29
+168,"Lisa Ozer","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",11500,29
+160,"Louise Doran","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7500,29
+164,"Mattea Marvins","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7200,29
+154,"Nanette Cambrault","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7500,29
+155,"Oliver Tuvault","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7000,29
+157,"Patrick Sully","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",9500,29
+152,"Peter Hall","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",9000,29
+161,"Sarath Sewall","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7000,29
+150,"Sean Tucker","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",10000,29
+166,"Sundar Ande","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",6400,29
+173,"Sundita Kumar","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",6100,29
+170,"Tayler Fox","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",9600,29
+171,"William Smith","Europe","United Kingdom of Great Britain and Northern Ireland","Oxford","Sales","Sales Representative",7400,29
+178,"Kimberely Grant",,,,,"Sales Representative",7000,1

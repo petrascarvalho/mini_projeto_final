@@ -1,0 +1,108 @@
+ID_EMPREGADO,NOME_FUNCIONARIO,REGIAO,PAIS,CIDADE,DEPARTAMENTO,CARGO,SALARIO_ATUAL,QUANTIDADE_FUNCIONARIOS,MENOR_SALARIO,MAIOR_SALARIO
+201,Michael Martinez,Americas,Canada,Toronto,MARKETING,MARKETING MANAGER,13000,1,9000,15000
+202,Pat Davis,Americas,Canada,Toronto,MARKETING,MARKETING REPRESENTATIVE,6000,1,4000,9000
+205,Shelley Higgins,Americas,United States of America,Seattle,ACCOUNTING,ACCOUNTING MANAGER,12008,1,8200,16000
+206,William Gietz,Americas,United States of America,Seattle,ACCOUNTING,PUBLIC ACCOUNTANT,8300,1,4200,9000
+200,Jennifer Whalen,Americas,United States of America,Seattle,ADMINISTRATION,ADMINISTRATION ASSISTANT,4400,1,3000,6000
+102,Lex Garcia,Americas,United States of America,Seattle,EXECUTIVE,ADMINISTRATION VICE PRESIDENT,17000,2,15000,30000
+101,Neena Yang,Americas,United States of America,Seattle,EXECUTIVE,ADMINISTRATION VICE PRESIDENT,17000,2,15000,30000
+100,Steven King,Americas,United States of America,Seattle,EXECUTIVE,PRESIDENT,24000,1,20080,40000
+109,Daniel Faviet,Americas,United States of America,Seattle,FINANCE,ACCOUNTANT,9000,5,4200,9000
+111,Ismael Sciarra,Americas,United States of America,Seattle,FINANCE,ACCOUNTANT,7700,5,4200,9000
+110,John Chen,Americas,United States of America,Seattle,FINANCE,ACCOUNTANT,8200,5,4200,9000
+112,Jose Manuel Urman,Americas,United States of America,Seattle,FINANCE,ACCOUNTANT,7800,5,4200,9000
+113,Luis Popp,Americas,United States of America,Seattle,FINANCE,ACCOUNTANT,6900,5,4200,9000
+108,Nancy Gruenberg,Americas,United States of America,Seattle,FINANCE,FINANCE MANAGER,12008,1,8200,16000
+115,Alexander Khoo,Americas,United States of America,Seattle,PURCHASING,PURCHASING CLERK,3100,5,2500,5500
+118,Guy Himuro,Americas,United States of America,Seattle,PURCHASING,PURCHASING CLERK,2600,5,2500,5500
+119,Karen Colmenares,Americas,United States of America,Seattle,PURCHASING,PURCHASING CLERK,2500,5,2500,5500
+116,Shelli Baida,Americas,United States of America,Seattle,PURCHASING,PURCHASING CLERK,2900,5,2500,5500
+117,Sigal Tobias,Americas,United States of America,Seattle,PURCHASING,PURCHASING CLERK,2800,5,2500,5500
+114,Den Li,Americas,United States of America,Seattle,PURCHASING,PURCHASING MANAGER,11000,1,8000,15000
+196,Alana Walsh,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3100,20,2500,5500
+185,Alexis Bull,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,4100,20,2500,5500
+187,Anthony Cabrio,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3000,20,2500,5500
+193,Britney Everett,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3900,20,2500,5500
+198,Donald OConnell,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2600,20,2500,5500
+199,Douglas Grant,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2600,20,2500,5500
+183,Girard Geoni,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2800,20,2500,5500
+181,Jean Fleaur,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3100,20,2500,5500
+189,Jennifer Dilly,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3600,20,2500,5500
+186,Julia Dellinger,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3400,20,2500,5500
+188,Kelly Chung,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3800,20,2500,5500
+197,Kevin Feeney,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3000,20,2500,5500
+182,Martha Sullivan,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2500,20,2500,5500
+184,Nandita Sarchand,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,4200,20,2500,5500
+191,Randall Perkins,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2500,20,2500,5500
+194,Samuel McLeod,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3200,20,2500,5500
+192,Sarah Bell,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,4000,20,2500,5500
+190,Timothy Venzl,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2900,20,2500,5500
+195,Vance Jones,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,2800,20,2500,5500
+180,Winston Taylor,Americas,United States of America,South San Francisco,SHIPPING,SHIPPING CLERK,3200,20,2500,5500
+142,Curtis Davies,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3100,20,2008,5000
+136,Hazel Philtanker,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2200,20,2008,5000
+126,Irene Mikkilineni,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2700,20,2008,5000
+127,James Landry,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2400,20,2008,5000
+131,James Marlow,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2500,20,2008,5000
+133,Jason Mallin,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3300,20,2008,5000
+139,John Seo,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2700,20,2008,5000
+140,Joshua Patel,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2500,20,2008,5000
+125,Julia Nayer,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3200,20,2008,5000
+135,Ki Gee,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2400,20,2008,5000
+129,Laura Bissot,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3300,20,2008,5000
+134,Michael Rogers,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2900,20,2008,5000
+130,Mozhe Atkinson,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2800,20,2008,5000
+144,Peter Vargas,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2500,20,2008,5000
+143,Randall Matos,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2600,20,2008,5000
+137,Renske Ladwig,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3600,20,2008,5000
+138,Stephen Stiles,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3200,20,2008,5000
+128,Steven Markle,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2200,20,2008,5000
+132,TJ Olson,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,2100,20,2008,5000
+141,Trenna Rajs,Americas,United States of America,South San Francisco,SHIPPING,STOCK CLERK,3500,20,2008,5000
+121,Adam Fripp,Americas,United States of America,South San Francisco,SHIPPING,STOCK MANAGER,8200,5,5500,8500
+124,Kevin Mourgos,Americas,United States of America,South San Francisco,SHIPPING,STOCK MANAGER,5800,5,5500,8500
+120,Matthew Weiss,Americas,United States of America,South San Francisco,SHIPPING,STOCK MANAGER,8000,5,5500,8500
+122,Payam Kaufling,Americas,United States of America,South San Francisco,SHIPPING,STOCK MANAGER,7900,5,5500,8500
+123,Shanta Vollman,Americas,United States of America,South San Francisco,SHIPPING,STOCK MANAGER,6500,5,5500,8500
+103,Alexander James,Americas,United States of America,Southlake,IT,PROGRAMMER,9000,5,4000,10000
+104,Bruce Miller,Americas,United States of America,Southlake,IT,PROGRAMMER,6000,5,4000,10000
+105,David Williams,Americas,United States of America,Southlake,IT,PROGRAMMER,4800,5,4000,10000
+107,Diana Nguyen,Americas,United States of America,Southlake,IT,PROGRAMMER,4200,5,4000,10000
+106,Valli Jackson,Americas,United States of America,Southlake,IT,PROGRAMMER,4800,5,4000,10000
+204,Hermann Brown,Europe,Germany,Munich,PUBLIC RELATIONS,PUBLIC RELATIONS REPRESENTATIVE,10000,1,4500,10500
+203,Susan Jacobs,Europe,United Kingdom of Great Britain and Northern Ireland,London,HUMAN RESOURCES,HUMAN RESOURCES REPRESENTATIVE,6500,1,4000,9000
+147,Alberto Errazuriz,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES MANAGER,12000,5,10000,20080
+149,Eleni Zlotkey,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES MANAGER,10500,5,10000,20080
+148,Gerald Cambrault,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES MANAGER,11000,5,10000,20080
+145,John Singh,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES MANAGER,14000,5,10000,20080
+146,Karen Partners,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES MANAGER,13500,5,10000,20080
+158,Allan McEwen,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,9000,29,6000,12008
+175,Alyssa Hutton,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,8800,29,6000,12008
+167,Amit Banda,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,6200,29,6000,12008
+179,Charles Johnson,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,6200,29,6000,12008
+153,Christopher Olsen,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,8000,29,6000,12008
+162,Clara Vishney,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,10500,29,6000,12008
+163,Danielle Greene,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,9500,29,6000,12008
+151,David Bernstein,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,9500,29,6000,12008
+165,David Lee,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,6800,29,6000,12008
+172,Elizabeth Bates,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7300,29,6000,12008
+174,Ellen Abel,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,11000,29,6000,12008
+169,Harrison Bloom,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,10000,29,6000,12008
+177,Jack Livingston,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,8400,29,6000,12008
+156,Janette King,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,10000,29,6000,12008
+176,Jonathon Taylor,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,8600,29,6000,12008
+159,Lindsey Smith,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,8000,29,6000,12008
+168,Lisa Ozer,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,11500,29,6000,12008
+160,Louise Doran,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7500,29,6000,12008
+164,Mattea Marvins,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7200,29,6000,12008
+154,Nanette Cambrault,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7500,29,6000,12008
+155,Oliver Tuvault,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7000,29,6000,12008
+157,Patrick Sully,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,9500,29,6000,12008
+152,Peter Hall,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,9000,29,6000,12008
+161,Sarath Sewall,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7000,29,6000,12008
+150,Sean Tucker,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,10000,29,6000,12008
+166,Sundar Ande,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,6400,29,6000,12008
+173,Sundita Kumar,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,6100,29,6000,12008
+170,Tayler Fox,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,9600,29,6000,12008
+171,William Smith,Europe,United Kingdom of Great Britain and Northern Ireland,Oxford,SALES,SALES REPRESENTATIVE,7400,29,6000,12008
+178,Kimberely Grant,SEM INFORMAÇÃO,SEM INFORMAÇÃO,SEM INFORMAÇÃO,SEM INFORMAÇÃO,SALES REPRESENTATIVE,7000,1,6000,12008
