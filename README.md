@@ -1,10 +1,10 @@
-# 📊 Mini Projeto Final — Visualização de Dados e Business Intelligence
+# 📊 Mini Projeto — Visualização de Dados e Business Intelligence
 
-**Curso:** SENAI/SC — SCTEC 
-**Módulo:** M1S07  
-**Professor:** Rodrigo Garcia Brunini  
-**Base de Dados:** FreeSQL — Human Resources `HR`  
-**Autor:** Petras Ruben Carvalho  
+**Curso:** SENAI/SC — Lab 365
+**Módulo:** M1S07
+**Professor:** Rodrigo Garcia Brunini
+**Base de Dados:** FreeSQL — Human Resources `HR`
+**Autor:** Petras Ruben Carvalho
 
 ---
 
@@ -38,15 +38,15 @@ Base Final Processada
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Tecnologia | Finalidade |
-|---|---|
-| **FreeSQL** | Ambiente utilizado para consulta da base HR |
-| **SQL** | Extração, relacionamento, filtros e agrupamentos |
-| **Python** | Tratamento, análise exploratória e visualização |
-| **Pandas** | Manipulação e integração dos dados |
-| **NumPy** | Cálculos numéricos e distribuição dos dados |
-| **Matplotlib** | Criação dos gráficos |
-| **CSV** | Integração entre SQL e Python |
+| Tecnologia           | Finalidade                                          |
+| -------------------- | --------------------------------------------------- |
+| **FreeSQL**    | Ambiente utilizado para consulta da base HR         |
+| **SQL**        | Extração, relacionamento, filtros e agrupamentos  |
+| **Python**     | Tratamento, análise exploratória e visualização |
+| **Pandas**     | Manipulação e integração dos dados              |
+| **NumPy**      | Cálculos numéricos e distribuição dos dados     |
+| **Matplotlib** | Criação dos gráficos                             |
+| **CSV**        | Integração entre SQL e Python                     |
 
 ---
 
@@ -80,9 +80,9 @@ A primeira etapa do projeto foi realizada no **FreeSQL**, utilizando a base de d
 
 Foram desenvolvidas duas consultas principais:
 
-| Query | Objetivo |
-|---|---|
-| `query_01.sql` | Analisar a distribuição de salários por departamento e cargo |
+| Query            | Objetivo                                                                |
+| ---------------- | ----------------------------------------------------------------------- |
+| `query_01.sql` | Analisar a distribuição de salários por departamento e cargo         |
 | `query_02.sql` | Analisar funcionários por região, país, cidade, departamento e cargo |
 
 ---
@@ -179,7 +179,7 @@ WITH RESULTADO_FUNCIONARIOS AS (
     LEFT JOIN HR.REGIONS R     ON C.REGION_ID = R.REGION_ID
     WHERE
         E.SALARY > 1000
-        AND E.SALARY < 30000
+        AND E.SALARY < 3000
 )
 SELECT
     ID_EMPREGADO,
@@ -223,10 +223,10 @@ A função de janela possibilita calcular a quantidade de funcionários por grup
 
 Após a execução das consultas no FreeSQL, os resultados foram exportados para arquivos CSV.
 
-| Arquivo | Origem | Finalidade |
-|---|---|---|
-| `query_01.csv` | `query_01.sql` | Complementar a análise salarial |
-| `query_02.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
+| Arquivo                   | Origem           | Finalidade                                            |
+| ------------------------- | ---------------- | ----------------------------------------------------- |
+| `query_01.csv`          | `query_01.sql` | Complementar a análise salarial                      |
+| `query_02_completa.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
 
 A exportação para CSV foi necessária para permitir a continuidade da análise em Python.
 
@@ -283,7 +283,7 @@ Essa etapa garante maior consistência nos dados e evita problemas causados por 
 
 ## 🔄 Etapa 05 — Integração das Bases
 
-A base `query_02.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
+A base `query_02_completa.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
 
 ```python
 df_final = pd.merge(
@@ -302,10 +302,10 @@ O tipo de junção utilizado foi o **LEFT JOIN**, mantendo todos os registros da
 
 Os valores ausentes foram tratados de acordo com o tipo da coluna.
 
-| Tipo de coluna | Tratamento |
-|---|---|
-| Texto | Substituição por `SEM INFORMAÇÃO` |
-| Numérica | Mantida como `NaN` para preservar os cálculos |
+| Tipo de coluna | Tratamento                                      |
+| -------------- | ----------------------------------------------- |
+| Texto          | Substituição por`SEM INFORMAÇÃO`          |
+| Numérica      | Mantida como`NaN` para preservar os cálculos |
 
 Essa decisão evita que colunas numéricas sejam convertidas em texto, garantindo que os cálculos estatísticos funcionem corretamente.
 
@@ -315,12 +315,12 @@ Essa decisão evita que colunas numéricas sejam convertidas em texto, garantind
 
 Foram calculadas as principais medidas estatísticas da coluna `SALARIO_ATUAL`.
 
-| Métrica | Objetivo |
-|---|---|
-| Média | Identificar o salário médio |
-| Mediana | Identificar o valor central da distribuição |
-| Mínimo | Identificar o menor salário |
-| Máximo | Identificar o maior salário |
+| Métrica | Objetivo                                      |
+| -------- | --------------------------------------------- |
+| Média   | Identificar o salário médio                 |
+| Mediana  | Identificar o valor central da distribuição |
+| Mínimo  | Identificar o menor salário                  |
+| Máximo  | Identificar o maior salário                  |
 
 Essas métricas fornecem uma visão geral da distribuição salarial dos funcionários analisados.
 
@@ -359,6 +359,8 @@ Utilizado para visualizar:
 - dispersão dos salários;
 - possíveis outliers.
 
+![1783549119852](image/README/1783549119852.png)
+
 ### 📊 Gráfico de Barras da Distribuição Salarial
 
 Utilizado para analisar:
@@ -366,6 +368,8 @@ Utilizado para analisar:
 - concentração de funcionários por faixa salarial;
 - distribuição dos salários;
 - comparação com os limites do IQR.
+
+![1783549157006](image/README/1783549157006.png)
 
 ---
 
@@ -416,7 +420,7 @@ Este projeto permitiu aplicar, de forma prática, conceitos importantes de anál
 
 ## 🏁 Conclusão
 
-O mini projeto Final demonstrou um fluxo completo de análise de dados, iniciando pela extração das informações no FreeSQL e avançando para o tratamento, integração e análise exploratória em Python.
+O mini projeto demonstrou um fluxo completo de análise de dados, iniciando pela extração das informações no FreeSQL e avançando para o tratamento, integração e análise exploratória em Python.
 
 A etapa SQL permitiu estruturar os dados da base HR, relacionando funcionários, departamentos, cargos, localizações, países e regiões.
 

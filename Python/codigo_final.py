@@ -22,7 +22,7 @@ df1 = pd.read_csv(
 )
 
 df2 = pd.read_csv(
-    r'C:\mini_projeto_final\mini_projeto_final\csv_nao_processados\query_02_completa.csv',
+    r'C:\mini_projeto_final\mini_projeto_final\csv_nao_processados\query_02.csv',
     sep=',',
     encoding='utf-8'
 )
