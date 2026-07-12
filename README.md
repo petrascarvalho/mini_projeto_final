@@ -40,13 +40,13 @@ Base Final Processada
 
 | Tecnologia           | Finalidade                                          |
 | -------------------- | --------------------------------------------------- |
-| **FreeSQL**    | Ambiente utilizado para consulta da base HR         |
-| **SQL**        | Extração, relacionamento, filtros e agrupamentos  |
-| **Python**     | Tratamento, análise exploratória e visualização |
-| **Pandas**     | Manipulação e integração dos dados              |
-| **NumPy**      | Cálculos numéricos e distribuição dos dados     |
-| **Matplotlib** | Criação dos gráficos                             |
-| **CSV**        | Integração entre SQL e Python                     |
+| **FreeSQL**          | Ambiente utilizado para consulta da base HR         |
+| **SQL**              | Extração, relacionamento, filtros e agrupamentos    |
+| **Python**           | Tratamento, análise exploratória e visualização     |
+| **Pandas**           | Manipulação e integração dos dados                  |
+| **NumPy**            | Cálculos numéricos e distribuição dos dados         |
+| **Matplotlib**       | Criação dos gráficos                                |
+| **CSV**              | Integração entre SQL e Python                       |
 
 ---
 
@@ -82,8 +82,8 @@ Foram desenvolvidas duas consultas principais:
 
 | Query            | Objetivo                                                                |
 | ---------------- | ----------------------------------------------------------------------- |
-| `query_01.sql` | Analisar a distribuição de salários por departamento e cargo         |
-| `query_02.sql` | Analisar funcionários por região, país, cidade, departamento e cargo |
+| `query_01.sql` | Analisar a distribuição de salários por departamento e cargo              |
+| `query_02.sql` | Analisar funcionários por região, país, cidade, departamento e cargo      |
 
 ---
 
@@ -223,10 +223,10 @@ A função de janela possibilita calcular a quantidade de funcionários por grup
 
 Após a execução das consultas no FreeSQL, os resultados foram exportados para arquivos CSV.
 
-| Arquivo                   | Origem           | Finalidade                                            |
-| ------------------------- | ---------------- | ----------------------------------------------------- |
-| `query_01.csv` | `query_01.sql` | Complementar a análise salarial                      |
-| `query_02.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
+| Arquivo                   | Origem           | Finalidade                                                      |
+| ------------------------- | ---------------- | ----------------------------------------------------------------|
+| `query_01.csv`            | `query_01.sql`   | Complementar a análise salarial                                 |
+| `query_02.csv`            | `query_02.sql`   | Base principal com dados detalhados dos funcionários            |
 
 A exportação para CSV foi necessária para permitir a continuidade da análise em Python.
 
@@ -304,8 +304,8 @@ Os valores ausentes foram tratados de acordo com o tipo da coluna.
 
 | Tipo de coluna | Tratamento                                      |
 | -------------- | ----------------------------------------------- |
-| Texto          | Substituição por`SEM INFORMAÇÃO`          |
-| Numérica       | Mantida como`NaN` para preservar os cálculos |
+| Texto          | Substituição por`SEM INFORMAÇÃO`                |
+| Numérica       | Mantida como`NaN` para preservar os cálculos    |
 
 Essa decisão evita que colunas numéricas sejam convertidas em texto, garantindo que os cálculos estatísticos funcionem corretamente.
 
