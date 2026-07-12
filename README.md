@@ -225,8 +225,8 @@ Após a execução das consultas no FreeSQL, os resultados foram exportados para
 
 | Arquivo                   | Origem           | Finalidade                                            |
 | ------------------------- | ---------------- | ----------------------------------------------------- |
-| `query_01.csv`          | `query_01.sql` | Complementar a análise salarial                      |
-| `query_02_completa.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
+| `query_01.csv` | `query_01.sql` | Complementar a análise salarial                      |
+| `query_02.csv` | `query_02.sql` | Base principal com dados detalhados dos funcionários |
 
 A exportação para CSV foi necessária para permitir a continuidade da análise em Python.
 
@@ -283,7 +283,7 @@ Essa etapa garante maior consistência nos dados e evita problemas causados por 
 
 ## 🔄 Etapa 05 — Integração das Bases
 
-A base `query_02_completa.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
+A base `query_02.csv` foi utilizada como base principal, enquanto a `query_01.csv` foi usada para complementar os dados com as informações de menor e maior salário.
 
 ```python
 df_final = pd.merge(
@@ -305,7 +305,7 @@ Os valores ausentes foram tratados de acordo com o tipo da coluna.
 | Tipo de coluna | Tratamento                                      |
 | -------------- | ----------------------------------------------- |
 | Texto          | Substituição por`SEM INFORMAÇÃO`          |
-| Numérica      | Mantida como`NaN` para preservar os cálculos |
+| Numérica       | Mantida como`NaN` para preservar os cálculos |
 
 Essa decisão evita que colunas numéricas sejam convertidas em texto, garantindo que os cálculos estatísticos funcionem corretamente.
 
@@ -316,11 +316,11 @@ Essa decisão evita que colunas numéricas sejam convertidas em texto, garantind
 Foram calculadas as principais medidas estatísticas da coluna `SALARIO_ATUAL`.
 
 | Métrica | Objetivo                                      |
-| -------- | --------------------------------------------- |
-| Média   | Identificar o salário médio                 |
-| Mediana  | Identificar o valor central da distribuição |
-| Mínimo  | Identificar o menor salário                  |
-| Máximo  | Identificar o maior salário                  |
+| --------| --------------------------------------------- |
+| Média   | Identificar o salário médio                   |
+| Mediana | Identificar o valor central da distribuição   |
+| Mínimo  | Identificar o menor salário                   |
+| Máximo  | Identificar o maior salário                   |
 
 Essas métricas fornecem uma visão geral da distribuição salarial dos funcionários analisados.
 
